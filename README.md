@@ -1,115 +1,212 @@
-# Crypto Arbitrage Scanner
+<div align="center">
 
-Program Python untuk mencari peluang arbitrase cryptocurrency di antara bursa terpusat (CEX) dan terdesentralisasi (DEX) serta antar DEX dalam jaringan yang sama dan berbeda.
+# 🚀 Crypto Arbitrage Scanner
 
-## Fitur
+<p align="center">
+  <img src="https://img.shields.io/badge/by-bobacheese-ff69b4?style=for-the-badge&logo=github&logoColor=white">
+  <img src="https://img.shields.io/badge/x-artificial_intelligence-00FFFF?style=for-the-badge&logo=openai&logoColor=white">
+  <img src="https://img.shields.io/badge/x-vscode-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white">
+</p>
 
-Program ini dapat mencari peluang arbitrase dalam tiga skenario:
-
-1. **Skenario 1 (DEX - CEX, Sama Jaringan)**: Mencari perbedaan harga antara DEX dan CEX untuk token yang sama.
-2. **Skenario 2 (DEX - DEX, Sama Jaringan)**: Mencari perbedaan harga antara berbagai DEX dalam jaringan yang sama.
-3. **Skenario 3 (DEX - DEX, Beda Jaringan)**: Mencari perbedaan harga antara DEX di jaringan yang berbeda untuk token multichain.
-
-Fitur tambahan:
-- Dukungan untuk 28 token DeFi populer
-- Format output WhatsApp yang mudah dibaca
-- Instruksi perdagangan terperinci untuk setiap peluang arbitrase
-- Simulasi investasi dalam Rupiah Indonesia dengan perhitungan keuntungan
-- Link verifikasi untuk memudahkan validasi peluang
-
-## Instalasi
-
-1. Clone repository ini:
-   ```
-   git clone https://github.com/username/crypto-arbitrage-scanner.git
-   cd crypto-arbitrage-scanner
-   ```
-
-2. Buat virtual environment (opsional tapi direkomendasikan):
-   ```
-   python -m venv venv
-   source venv/bin/activate  # Untuk Linux/Mac
-   venv\Scripts\activate     # Untuk Windows
-   ```
-
-3. Install dependensi:
-   ```
-   pip install -r requirements.txt
-   ```
-
-4. Konfigurasi:
-   - Edit file `config.py` untuk menyesuaikan parameter seperti daftar token, CEX, DEX, dan ambang batas keuntungan.
-
-## Penggunaan
-
-### Menjalankan Program
-
-Untuk menjalankan program dengan semua skenario:
-
+```diff
++                  ✨ CRYPTO TRADING ELEVATED ✨                  +
 ```
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/downloads/)
+[![DeFi](https://img.shields.io/badge/DeFi-Supported-green.svg)]()
+[![Networks](https://img.shields.io/badge/Networks-ETH%20|%20BSC%20|%20Polygon-blueviolet.svg)]()
+
+<img src="https://i.imgur.com/YPFnQTi.png" alt="Crypto Arbitrage" width="300"/>
+
+**Temukan peluang arbitrase cryptocurrency secara real-time di berbagai DEX dan CEX**
+
+[Fitur](#fitur) • [Instalasi](#instalasi) • [Penggunaan](#penggunaan) • [Token](#kategori-token) • [Output](#output) • [Catatan](#catatan-penting)
+
+</div>
+
+## 💎 Fitur
+
+Program ini memindai peluang arbitrase cryptocurrency dalam tiga skenario berbeda:
+
+### 🔄 Skenario Arbitrase
+
+1. **DEX ↔️ CEX (Sama Jaringan)** - Memanfaatkan perbedaan harga antara bursa terdesentralisasi dan terpusat
+2. **DEX ↔️ DEX (Sama Jaringan)** - Menemukan disparitas harga antar DEX dalam blockchain yang sama
+3. **DEX ↔️ DEX (Beda Jaringan)** - Mengidentifikasi peluang arbitrase lintas-rantai untuk token multichain
+
+### ✨ Fitur Unggulan
+
+- 📊 **Analisis Multi-DEX** - Memindai lebih dari 20 DEX populer secara bersamaan
+- 🔍 **Deteksi Peluang Real-time** - Menemukan disparitas harga saat terjadi
+- 💰 **Simulasi Profit** - Perhitungan keuntungan dalam Rupiah Indonesia dengan estimasi biaya gas
+- 📱 **Format WhatsApp** - Output yang dioptimalkan untuk berbagi via WhatsApp
+- 🔗 **Link Verifikasi** - Tautan langsung untuk memverifikasi peluang arbitrase
+- 🛡️ **Validasi Likuiditas** - Memastikan peluang memiliki likuiditas yang cukup
+
+## 🔧 Instalasi
+
+### Prasyarat
+
+- Python 3.7 atau lebih baru
+- Koneksi internet stabil
+- Akun di bursa cryptocurrency (opsional, untuk verifikasi)
+
+### Langkah-langkah
+
+```bash
+# Clone repository
+git clone https://github.com/bobacheese/crypto-arbitrage-scanner.git
+cd crypto-arbitrage-scanner
+
+# Buat virtual environment
+python -m venv venv
+
+# Aktifkan virtual environment
+# Untuk Windows:
+venv\Scripts\activate
+# Untuk macOS/Linux:
+# source venv/bin/activate
+
+# Install dependensi
+pip install -r requirements.txt
+```
+
+### Konfigurasi
+
+Edit file `config.py` untuk menyesuaikan:
+- Daftar token yang dipantau
+- Koneksi API ke bursa
+- Parameter arbitrase (minimum profit, likuiditas, dll)
+- Kurs mata uang untuk simulasi profit
+
+## 💻 Penggunaan
+
+### Perintah Dasar
+
+```bash
+# Jalankan dengan pengaturan default
 python main.py
+
+# Jalankan skenario spesifik
+python main.py --scenario 2 --category defi
 ```
 
-### Opsi Command Line
+### 🎛️ Opsi Command Line
 
-Program ini mendukung beberapa opsi command line:
+| Opsi | Deskripsi | Contoh |
+|------|-----------|--------|
+| `--scenario` | Skenario arbitrase (1-3) | `--scenario 2` |
+| `--category` | Kategori token | `--category defi` |
+| `--tokens` | Token spesifik | `--tokens WETH,WBTC` |
+| `--min-profit` | Profit minimum (%) | `--min-profit 0.5` |
+| `--min-liquidity` | Likuiditas minimum ($) | `--min-liquidity 10000` |
+| `--continuous` | Mode pemindaian kontinu | `--continuous` |
+| `--interval` | Interval pemindaian (detik) | `--interval 120` |
 
-- `--scenario`: Menentukan skenario yang akan dipindai (1, 2, atau 3)
-- `--continuous`: Menjalankan pemindaian secara terus-menerus
-- `--interval`: Interval pemindaian dalam detik (untuk mode continuous)
-- `--category`: Kategori token yang akan dipindai (defi, stablecoins, gaming, layer2, wrapped, all)
-- `--tokens`: Daftar token yang akan dipindai (dipisahkan koma)
-- `--min-profit`: Persentase keuntungan minimum
-- `--min-liquidity`: Likuiditas minimum dalam USD
+### 💯 Cara Penggunaan
 
-Contoh:
-
-```
-# Menjalankan pemindaian untuk Skenario 1
+```bash
+# Pemindaian DEX-CEX (Skenario 1)
 python main.py --scenario 1
 
-# Menjalankan pemindaian terus-menerus dengan interval 120 detik
+# Pemindaian kontinu setiap 2 menit
 python main.py --continuous --interval 120
 
-# Memindai token tertentu dengan keuntungan minimum 1%
-python main.py --tokens WETH,WBTC,LINK --min-profit 1.0
-
-# Memindai kategori DeFi dengan keuntungan minimum 0.5% dan likuiditas minimum $10,000
+# Pemindaian token DeFi dengan profit minimum 0.5%
 python main.py --scenario 2 --category defi --min-profit 0.5 --min-liquidity 10000
+
+# Pemindaian token spesifik
+python main.py --tokens WETH,WBTC,LINK --min-profit 1.0
 ```
 
-## Output
+### 📊 Strategi Pemindaian
 
-Program akan menampilkan hasil pemindaian dalam format tabel yang mudah dibaca menggunakan modul `rich`. Hasil juga akan disimpan dalam dua file:
+- **Pemindaian Cepat**: Gunakan `--category` untuk fokus pada kelompok token tertentu
+- **Pemindaian Mendalam**: Gunakan mode `--continuous` dengan interval yang lebih panjang
+- **Pemindaian Terverifikasi**: Tingkatkan `--min-liquidity` untuk mengurangi risiko slippage
 
-- `arbitrage_opportunities.json`: Data peluang arbitrase lengkap dalam format JSON
-- `arbitrage_whatsapp.txt`: Format yang dioptimalkan untuk WhatsApp dengan instruksi perdagangan
+## 📄 Output
 
-## Kategori Token
 
-- **DeFi**: LINK, UNI, AAVE, SUSHI, CAKE, COMP, CRV, SNX, MKR, 1INCH, BAL, YFI, DYDX, GRT, LDO, FXS, LQTY, PERP, REN, RPL, ALPHA, BADGER, RUNE, SPELL, CVX, INJ, DODO, QUICK
-- **Stablecoins**: USDT, USDC, DAI, BUSD, FRAX
-- **Gaming**: AXS, SAND, MANA
-- **Layer2**: MATIC, OP, ARB
-- **Wrapped**: WETH, WBTC, WBNB, WMATIC
 
-## Struktur Program
+### File Output
 
-- `main.py`: Entry point program
-- `config.py`: Konfigurasi program
-- `arbitrage.py`: Logika arbitrase
-- `cex_data.py`: Pengambilan data dari CEX
-- `dex_data.py`: Pengambilan data dari DEX
-- `output.py`: Fungsi output dan pelaporan
-- `utils.py`: Fungsi utilitas
+| File | Deskripsi | Kegunaan |
+|------|-----------|----------|
+| `arbitrage_opportunities.json` | Data lengkap dalam format JSON | Analisis lanjutan & integrasi dengan tools lain |
+| `arbitrage_whatsapp.txt` | Format teks teroptimasi | Berbagi peluang via WhatsApp dengan instruksi perdagangan |
 
-## Catatan Penting
+## 🔎 Kategori Token
 
-- Program ini hanya untuk tujuan informasi dan edukasi.
-- Selalu lakukan riset dan analisis risiko sendiri sebelum melakukan arbitrase nyata.
-- Harga dan likuiditas di pasar cryptocurrency dapat berubah dengan cepat.
-- Biaya transaksi, slippage, dan faktor lain dapat mempengaruhi profitabilitas arbitrase.
+<div align="center">
 
-## Lisensi
+### Kategori Token yang Didukung
 
-[MIT License](LICENSE)
+| Kategori | Tokens | Jumlah |
+|----------|--------|--------|
+| **💰 DeFi** | LINK, UNI, AAVE, SUSHI, CAKE, COMP, CRV, SNX, MKR, 1INCH, BAL, YFI, DYDX, GRT, LDO, FXS, LQTY, PERP, REN, RPL, ALPHA, BADGER, RUNE, SPELL, CVX, INJ, DODO, QUICK | 28 |
+| **💸 Stablecoins** | USDT, USDC, DAI, BUSD, FRAX | 5 |
+| **🎮 Gaming** | AXS, SAND, MANA | 3 |
+| **🛢️ Layer2** | MATIC, OP, ARB | 3 |
+| **💼 Wrapped** | WETH, WBTC, WBNB, WMATIC | 4 |
+
+</div>
+
+### Jaringan yang Didukung
+
+- **Ethereum** - Jaringan utama dengan likuiditas tertinggi
+- **Binance Smart Chain (BSC)** - Biaya gas rendah, throughput tinggi
+- **Polygon** - Solusi scaling Layer-2 dengan biaya transaksi minimal
+
+## 📚 Struktur Kode
+
+```
+crypto-arbitrage-scanner/
+├── main.py           # Entry point program
+├── config.py         # Konfigurasi & parameter
+├── arbitrage.py      # Logika arbitrase utama
+├── cex_data.py       # Pengambilan data dari CEX
+├── dex_data.py       # Pengambilan data dari DEX
+├── output.py         # Formatter output & pelaporan
+└── utils.py          # Fungsi utilitas
+```
+
+## ⚠️ Catatan Penting
+
+> **Disclaimer**: Program ini hanya untuk tujuan informasi dan edukasi.
+
+- **Risiko Pasar**: Harga dan likuiditas cryptocurrency dapat berubah dalam hitungan detik
+- **Biaya Transaksi**: Gas fees, biaya trading, dan slippage dapat mengurangi profitabilitas
+- **Due Diligence**: Selalu verifikasi peluang arbitrase sebelum melakukan transaksi nyata
+- **Keamanan**: Gunakan wallet terpisah dengan dana terbatas untuk aktivitas arbitrase
+
+## 📝 Kontribusi
+
+Kontribusi sangat diterima! Jika Anda ingin berkontribusi:
+
+1. Fork repositori ini
+2. Buat branch fitur (`git checkout -b feature/AmazingFeature`)
+3. Commit perubahan Anda (`git commit -m 'Add some AmazingFeature'`)
+4. Push ke branch (`git push origin feature/AmazingFeature`)
+5. Buka Pull Request
+
+## 🔒 Lisensi
+
+Didistribusikan di bawah Lisensi MIT. Lihat `LICENSE` untuk informasi lebih lanjut.
+
+## 👨‍💻 Kontak
+
+Bobacheese - [@bobacheese](https://github.com/bobacheese)
+
+Link Proyek: [https://github.com/bobacheese/crypto-arbitrage-scanner](https://github.com/bobacheese/crypto-arbitrage-scanner)
+
+---
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-red.svg?style=for-the-badge" alt="Made with love">
+
+**© 2024 bobacheese | Powered by AI | Built with VSCode**
+
+</div>
