@@ -9,7 +9,7 @@
 </p>
 
 ```diff
-             +                  ✨ CRYPTO TRADING ELEVATED ✨                  +
+                                                          +                  ✨ CRYPTO TRADING ELEVATED ✨                  +
 ```
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
