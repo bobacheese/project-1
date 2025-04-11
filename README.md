@@ -206,6 +206,6 @@ Link Proyek: [https://github.com/bobacheese/crypto-arbitrage-scanner](https://gi
 
 <img src="https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-red.svg?style=for-the-badge" alt="Made with love">
 
-**© 2024 bobacheese | Powered by AI | Built with VSCode**
+**© 2025 bobacheese | Powered by AI | Built with VSCode**
 
 </div>
