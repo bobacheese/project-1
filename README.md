@@ -9,7 +9,7 @@
 </p>
 
 ```diff
-+                  ✨ CRYPTO TRADING ELEVATED ✨                  +
+             +                  ✨ CRYPTO TRADING ELEVATED ✨                  +
 ```
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -17,7 +17,6 @@
 [![DeFi](https://img.shields.io/badge/DeFi-Supported-green.svg)]()
 [![Networks](https://img.shields.io/badge/Networks-ETH%20|%20BSC%20|%20Polygon-blueviolet.svg)]()
 
-<img src="https://i.imgur.com/YPFnQTi.png" alt="Crypto Arbitrage" width="300"/>
 
 **Temukan peluang arbitrase cryptocurrency secara real-time di berbagai DEX dan CEX**
 
