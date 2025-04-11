@@ -55,7 +55,7 @@ Program ini memindai peluang arbitrase cryptocurrency dalam tiga skenario berbed
 
 ```bash
 # Clone repository
-git clone https://github.com/bobacheese/crypto-arbitrage-scanner.git
+git clone https://github.com/bobacheese/project-1.git
 cd crypto-arbitrage-scanner
 
 # Buat virtual environment
